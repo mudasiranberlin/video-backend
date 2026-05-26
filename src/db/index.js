@@ -1,5 +1,5 @@
  import mongoose from "mongoose";
- import { DB_NAME } from "../constants";
+ import { DB_NAME } from "../constants.js";
 
  const connectDB=async()=>{
     try {
@@ -8,7 +8,7 @@
         
         
     } catch (error) {
-        console.log("MONGODB CONNECTION ERROR",error);
+        console.log("MONGODB CONNECTION ERROR Failed",error);
         process.exit(1)
     }
  }
