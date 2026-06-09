@@ -14,12 +14,10 @@ const subTodoSchema= new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref:"User"
     },
-    subTodos:[
-        {
+    createdBy:{
             type:mongoose.Schema.Types.ObjectId,
-            ref:""
+            ref:"User",
         }
-    ]
 
 },{timestamps})
 

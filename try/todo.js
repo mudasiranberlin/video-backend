@@ -17,9 +17,10 @@ const todoSchema= new mongoose.Schema({
 
     subTodos:[
         {
-            type:String
-        }
-    ]
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"Subtodo"
+        },
+    ],
 
 },{timestamps:true})
 
