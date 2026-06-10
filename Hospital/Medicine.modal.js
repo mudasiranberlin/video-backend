@@ -18,7 +18,10 @@ const MedcineSchema= new mongoose.Schema({
         type:Number,
         required:true
     },
-    expir
+    expiry:{
+        type:String,
+        required:true
+    }
 
 
 },{timestamps:true})
