@@ -5,19 +5,22 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true,
         unique:true,
-        lowercase:true
+        lowercase:true,
+        trim:true,
+        index:true
     },
     email:{
         type:String,
         required:true,
         unique:true,
-        lowercase:true
+        lowercase:true,
+        trim:true,
     },
     fullNamae:{
         type:String,
         required:true,
-        unique:true,
-        lowercase:true
+        lowercase:true,
+        trim:true,
     },
     avatar:{
         type:String
@@ -29,7 +32,9 @@ const userSchema = new mongoose.Schema({
     coverImage:{
         type:String
     },
-    
+    refreshToken:{
+        type:String,
+    }
 },{timestamps:true})
 
 export const User=mongoose.model("User",userSchema)
