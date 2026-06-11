@@ -23,7 +23,8 @@ const userSchema = new mongoose.Schema({
         trim:true,
     },
     avatar:{
-        type:String
+        type:String,
+        required:true
     },
     password:{
         type:String,
@@ -34,7 +35,13 @@ const userSchema = new mongoose.Schema({
     },
     refreshToken:{
         type:String,
-    }
+    },
+    watchHistroy:[
+        {
+            type:mongoose.Types.ObjectId,
+            ref:""
+        }
+    ]
 },{timestamps:true})
 
 export const User=mongoose.model("User",userSchema)
