@@ -41,7 +41,10 @@ const userSchema = new mongoose.Schema({
             type:mongoose.Types.ObjectId,
             ref:""
         }
-    ]
+    ],
+    refreshToken:{
+        type:String
+    }
 },{timestamps:true})
 
 export const User=mongoose.model("User",userSchema)
