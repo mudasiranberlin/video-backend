@@ -58,4 +58,38 @@ userSchema.methods.isPasswordCorrect =async function (password) {
     return await bcrypt.compare(password,this.password)
 }
 
+userSchema.methods.generateAccesstoken= function () {
+    jwt.sign(
+        {
+            _id:this._id,
+            email:this.email,
+            username:this.username,
+            fullNamae:this.fullNamae
+        },
+        process.env.AccesstokenSecret,
+        {
+            expiresIn:process.env.AccesstokenExpiry
+        }
+    )
+    
+}
+
+userSchema.methods.generateRefreshtoken= function () {
+    jwt.sign(
+        {
+            _id:this._id,
+            email:this.email, 
+        },
+        process.env.AccesstokenSecret,
+        {
+            expiresIn:process.env.AccesstokenExpiry
+        }
+    )
+    
+}
+
+userSchema.methods.generateRefreshtoken= function () {
+    
+}
+
 export const User =mongoose.model("User",userSchema)
