@@ -18,6 +18,6 @@ const uploadCloudnary =async(localFilePath)=>{
         console.log("File is Uploaded on cloudinary",response.url);
         return response
     } catch (error) {
-        
+        fs.unlinkSync(localFilePath)// remove the locally saved temporay file 
     }
 }
