@@ -6,6 +6,7 @@ cloudinary.config({
   api_key: process.env.my_key, 
   api_secret: process.env.my_secret
 });
+...uploadCloudnary
 
 const uploadCloudnary = async(localFilePath)=>{
     try {
