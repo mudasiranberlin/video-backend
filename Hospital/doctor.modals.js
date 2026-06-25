@@ -24,9 +24,6 @@ const doctorScheme = new mongoose.Schema({
         ref: "Video",
         required: true
     }
-    
-    
-
 
 },{timestamps:true})
 
