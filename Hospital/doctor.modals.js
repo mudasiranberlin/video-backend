@@ -1,31 +1,33 @@
 import mongoose from "mongoose";
 
-const doctorSchema = new mongoose.Schema({
+const doctorScheme = new mongoose.Schema({
     name:{
-        type: String,
-        lowercase: true,
-        required: true,
+        type:String,
+        lowercase:true,
+        required:true
     },
     salary:{
         type: String,
-        required: true
+        required: true,
     },
     qualification:{
-        type: String,
-        required: true
+        type:String,
+        required:true
     },
-    experienceInYears:{
-        type: Number,
-        required: true,
+    experience:{
+        type:Number,
+        required:true,
         default:0
     },
-
-    worksInHospital:{
+    worksinhospital:{
         type: mongoose.Types.ObjectId,
-        ref: "Hospital",
+        ref: "Video",
         required: true
     }
+    
+    
+
 
 },{timestamps:true})
 
-export const doctor= mongoose.model("doctor",doctor)
+export const Doctor =mongoose.model("Doctor",doctorScheme) 
