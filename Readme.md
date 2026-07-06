@@ -100,8 +100,4 @@ The server will start on `http://localhost:8000` (or your configured `PORT`).
 
 ## Author
 
-**Mudasir Ahmad**
-
-## License
-
-ISC
+**Mudasir Ahmad**  // @anbelin
